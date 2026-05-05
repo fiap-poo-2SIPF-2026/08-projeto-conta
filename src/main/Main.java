@@ -18,6 +18,14 @@ public class Main {
             System.out.println(conta.getSaldoDisponivel());
         }
 
+        // aplicar rendimento apenas na poupança
+        for(Conta conta : lista) {
+            if(conta instanceof ContaPoupanca) {
+                ((ContaPoupanca) conta).aplicarRendimento();
+            }
+            System.out.println(conta.getSaldoDisponivel());
+        }
+
 
     }
 }
